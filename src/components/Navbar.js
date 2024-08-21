@@ -45,7 +45,7 @@ function Navbar() {
                         <ul>
                             <a href='https://medium.com/@npierce1798/protocols-of-the-internet-d0c98200198b' className='nav_a'><li>Internet Protocols</li></a>
                             <a href='https://medium.com/@npierce1798/how-does-google-process-a-request-c92191602d9f' className='nav_a'><li>Google Requests</li></a>
-                            <li>Http, DevTools, and REST</li>
+                            
                         </ul>
                     </div>
                 )}
