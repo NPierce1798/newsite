@@ -1,7 +1,11 @@
+/* General App styling */
 .App {
-  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #1a1a1a; /* Dark background for the app */
+  color: #e0e0e0; /* Light text color for better contrast */
 }
 
+/* App Logo Styling */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,18 +18,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--primary-color);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 0px 15px 20px 15px; /* Increased padding for better spacing */
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--text-color);
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--link-color);
 }
 
 @keyframes App-logo-spin {
@@ -34,5 +35,399 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Hero Section */
+.app__hero {
+  background-image: url('../public/hero2.jpg');
+  background-size: cover;
+  background-position: center; /* Center the background image */
+  border-radius: 0px 0px 25px 25px;
+  width: 95%;
+  height: fit-content;
+  margin: auto;
+  padding: 20px 10px 60px 10px; /* Adjusted padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+/* CSS Variables */
+:root {
+  --primary-color: #282c34;
+  --secondary-color: #5b6b8c;
+  --link-color: #4db6f1; /* Lighter link color for contrast */
+  --text-color: #e0e0e0; /* Light text color */
+  --button-hover-color: rgba(108, 126, 159, 0.3);
+  --heading-color: #9eddec; /* Adjusted heading color */
+}
+
+/* Navbar Styles */
+.navbar__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* Center all elements horizontally */
+  width: 100vw;
+  height: 80px; /* Increased height for larger elements */
+  top: 0;
+  position: fixed;
+  padding: 0 20px; /* Padding for left and right sides */
+  margin-bottom: 25px;
+  background-color: rgba(22, 25, 32, 0.8); /* Slightly more opaque for better visibility */
+  transition: background-color 0.3s;
+  z-index: 1000; /* Ensure navbar is on top */
+}
+
+.navbar__container:hover {
+  background-color: rgba(22, 25, 32, 0.9); /* Darker on hover */
+}
+
+.navbar__link-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the links within the container */
+  gap: 10px; /* Small gap between links for uniform spacing */
+}
+
+.navbar__button {
+  padding: 15px 25px; /* Larger padding for bigger buttons */
+  background-color: transparent;
+  color: var(--text-color);
+  font-weight: bold;
+  border: none;
+  font-size: 18px; /* Larger font size for visibility */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.navbar__button:hover {
+  background-color: rgba(108, 126, 159, 0.3);
+  transform: translateY(-2px); /* Slight lift on hover */
+  cursor: pointer;
+}
+
+.navbar__logo-container {
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 24px; /* Larger logo font size */
+  margin-right: 15px; /* Smaller margin to keep it closer to the links */
+}
+
+/* Heading Styles */
+.heading__content-container {
+  margin: 80px auto auto auto;
+  padding: 25px;
+  width: 80%; /* Adjusted for better responsiveness */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(44, 51, 64, 0.3);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px; /* Subtle shadow */
+}
+
+.heading__h1 {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+  color: var(--heading-color);
+  font-size: 28px; /* Font size for visibility */
+}
+
+.heading__p {
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  color: var(--text-color); /* Consistent text color */
+  margin: 15px 0;
+}
+
+.heading__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center content */
+  flex-wrap: wrap; /* Wrap for responsiveness */
+  gap: 15px; /* Gap for spacing */
+}
+
+.heading__button {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 18px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: rgb(108, 194, 216);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.heading__button:hover {
+  cursor: pointer;
+  background-color: rgba(63, 203, 238, 0.8);
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Card Styles */
+.card__container {
+  padding: 20px; /* Reduced padding for better spacing */
+  margin: 15px; /* Margin for spacing */
+  background-color: rgba(188, 244, 252, 0.2); /* Light background */
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px; /* Subtle shadow */
+}
+
+.card__heading-container {
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+.card__contents-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.card__col {
+  margin-bottom: 20px;
+  min-width: 200px; /* Prevent columns from getting too narrow */
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  font-size: 18px;
+  border-left: solid 2px var(--primary-color);
+}
+
+.card__heading {
+  color: rgb(108, 194, 216);
+  font-size: 28px; /* Font size for emphasis */
+}
+
+.card__section-heading {
+  color: rgb(181, 240, 255);
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: solid 2px var(--primary-color);
+  width: fit-content;
+}
+
+.card2__container {
+  padding: 20px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(188, 244, 252, 0.15);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px; /* Subtle shadow */
+}
+  
+.card2__heading-container {
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 2px var(--primary-color);
+  width: fit-content;
+  margin-bottom: 10px;
+}
+  
+.card2__heading {
+  color: rgb(108, 194, 216);
+  font-size: 20px; /* Consistent font size */
+  margin: 5px 0;
+}
+
+.card2__p {
+  color: var(--text-color); /* Use text color */
+  margin: 5px 0;
+}
+
+/* Gallery Styles */
+.gallery__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.gallery__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center content */
+  flex-wrap: wrap; /* Wrap for responsiveness */
+  gap: 15px; /* Gap for spacing */
+}
+
+.gallery__image {
+  width: 80%; /* Adjusted for responsiveness */
+  max-width: 300px; /* Max width for scaling */
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px; /* Subtle shadow */
+}
+
+.gallery__heading {
+  color: rgb(108, 194, 216);
+  border-bottom: solid 1px var(--text-color);
+  margin: 10px;
+  font-size: 24px; /* Emphasized heading */
+}
+
+.gallery_button {
+  border: none;
+  background-color: #343d4e;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.gallery_button:hover {
+  cursor: pointer;
+  background-color: rgba(188, 244, 252, 0.2);
+}
+
+.gallery__text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.gallery__p {
+  margin: 10px;
+  color: var(--text-color); /* Use text color */
+  text-align: center;
+}
+
+/* About Section */
+.about__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align content */
+  background-color: rgba(0,0,0,0.15);
+  padding: 45px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px; /* Subtle shadow */
+}
+
+.about__row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Wrap for responsiveness */
+  gap: 15px; /* Gap for spacing */
+  justify-content: center; /* Center content */
+  margin: auto;
+}
+
+.about__image {
+  width: 80%; /* Responsive width */
+  max-width: 250px; /* Max width for scaling */
+  max-height: 400px;
+  border-radius: 200px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px; /* Subtle shadow */
+}
+
+.about__text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align content */
+  max-width: 500px; /* Max width for scaling */
+  padding: 0px 0px 15px 25px;
+  border-bottom: solid 1px var(--text-color);
+  border-left: solid 1px var(--text-color);
+}
+
+.about__contact-head {
+  width: fit-content;
+  align-self: center;
+  border-bottom: solid 1px var(--text-color);
+  color: var(--heading-color);
+  font-size: 24px; /* Emphasized contact heading */
+  margin: 10px 0;
+}
+
+.about__contact-p {
+  align-self: center;
+  color: rgb(100, 200, 250);
+  font-size: 16px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* Learn Section */
+.learn__content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px; /* Subtle shadow */
+  margin: 15px; /* Margin for spacing */
+}
+
+.learnlink__container {
+  transition: 0.3s;
+  padding: 10px 15px; /* Padding for mobile friendliness */
+  border-radius: 5px;
+  background-color: rgba(91, 76, 108, 0.2);
+}
+.learnlink__container:hover {
+  background-color: rgba(91, 76, 108, 0.4);
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heading__content-container,
+  .about__text-container,
+  .gallery__row {
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 20px; /* Padding for mobile */
+  }
+
+  .heading__h1,
+  .about__contact-head,
+  .gallery__heading {
+    font-size: 22px; /* Adjust font size */
+  }
+
+  .heading__p,
+  .about__contact-p,
+  .gallery__p {
+    font-size: 14px; /* Adjust font size */
+    margin: 10px 0;
+  }
+
+  .navbar__button,
+  .heading__button {
+    font-size: 14px; /* Adjust font size */
+    padding: 10px 15px; /* Adjust padding */
+  }
+
+  .about__image {
+    width: 70%; /* Adjust width for smaller screens */
+  }
+
+  .card__contents-container {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center; /* Center align on smaller screens */
+  }
+
+  .card__col {
+    width: 100%; /* Take full width on smaller screens */
+    border-left: none; /* Remove border on mobile for better visuals */
+    border-top: solid 2px var(--primary-color); /* Add border on top for separation */
+    padding-top: 10px;
   }
 }

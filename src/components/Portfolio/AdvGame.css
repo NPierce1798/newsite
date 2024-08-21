@@ -1,0 +1,157 @@
+.App {
+    padding-bottom: 25px;
+}
+
+/* General container styling */
+.adv-game__container {
+    max-width: 800px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: #1e1e1e; /* Dark background color */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Heading styling */
+.adv-game__heading {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff; /* White heading color */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.adv-game__sub-heading {
+    font-size: 20px;
+    width: fit-content;
+    border-bottom: solid 2px white;
+}
+
+/* Description styling */
+.adv-game__description {
+    font-size: 16px;
+    color: #cccccc; /* Light grey description color */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Body section styling */
+.adv-game__body-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input section styling */
+.adv-game__input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.adv-game__input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Override MUI TextField styles for dark mode */
+.MuiTextField-root {
+    background-color: #333; /* Dark input background */
+    border-radius: 4px;
+}
+
+.MuiInputBase-input, .MuiInputLabel-root {
+    color: #e0e0e0 !important; /* Light text color for input */
+}
+
+.MuiOutlinedInput-notchedOutline {
+    border-color: #555 !important; /* Dark border color */
+}
+
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #007bff !important; /* Highlight color when focused */
+}
+
+.Mui-focused .MuiInputLabel-root {
+    color: #007bff !important; /* Highlight color for label when focused */
+}
+
+/* Button styling */
+.adv-game__submit, .adv-game__next-action-button {
+    background-color: #007bff; /* Blue button background */
+    color: #ffffff; /* White button text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.adv-game__submit:hover, .adv-game__next-action-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Story container styling */
+.adv-game__story-container {
+    background-color: #292929; /* Darker background for story container */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Slight shadow */
+    color: #e0e0e0; /* Light text color */
+}
+
+.adv-game__story-container h5 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff; /* White heading color */
+    margin-bottom: 10px;
+}
+
+.adv-game__story-container p {
+    font-size: 16px;
+    color: #cccccc; /* Light grey text */
+    margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .adv-game__container {
+        padding: 15px;
+    }
+
+    .adv-game__heading {
+        font-size: 22px;
+    }
+
+    .adv-game__description {
+        font-size: 14px;
+    }
+
+    .adv-game__submit, .adv-game__next-action-button {
+        font-size: 14px;
+    }
+
+    .adv-game__story-container h5 {
+        font-size: 18px;
+    }
+
+    .adv-game__story-container p {
+        font-size: 14px;
+    }
+}
+/* Loading Indicator */
+.loading-indicator {
+    display: inline-block;
+    font-size: 1.5em;
+    color: #007bff;
+    animation: loading-animation 1s infinite;
+}
+
+@keyframes loading-animation {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
