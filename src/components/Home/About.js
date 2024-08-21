@@ -13,7 +13,7 @@ function About () {
                     <h5 style={{'margin-top':'0px'}}>Nicolas Pierce</h5>
                     <p>My name is Nicolas Pierce, I am a dedicated Full Stack Developer with over three years of experience in building and deploying robust web applications. My expertise spans a diverse tech stack, including Python, Django, JavaScript, React.js, and SQL, as well as cloud technologies like AWS and containerization with Docker. I thrive on solving complex problems, continuously learning new technologies, and leading projects from inception to successful delivery. I’m driven by the challenge of turning ideas into functional, user-friendly solutions.</p>
                 </div>
-                <img src={me} className="about__image" />
+                <img src={me} className="about__image" alt="self-portrait"/>
             </div>
             <h4 className="about__contact-head">Feel free to <a href='https://www.linkedin.com/in/nicolas-pierce' style={{'textDecoration':'none'}}><span style={{'color':'rgb(100, 200, 250)'}}>Contact Me</span></a> with any inquiries</h4>
             <p className="about__contact-p"><EmailIcon /> Email: npierce1798@gmail.com</p>

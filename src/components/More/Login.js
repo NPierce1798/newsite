@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import authService from "../auth";
 import './auth.css'
-import Logout from "./Logout";
 
 const Login = () => {
   const [username, setUsername] = useState("");

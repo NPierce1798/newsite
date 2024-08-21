@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import '../../App.css';
 import ja from '../../images/justask.png'
 import bb from '../../images/bravoburrito.png'
-import { useActionData } from "react-router-dom";
 
 const images = [
     ja,
@@ -32,7 +30,7 @@ function Gallery() {
 
             <div className="gallery__row">
                 <button className="gallery_button" onClick={handlePrevClick}><ArrowBackIosIcon sx={{'color':'rgb(108, 194, 216)'}} /></button>
-                <img src={images[currentIndex]} className="gallery__image"/>
+                <img src={images[currentIndex]} className="gallery__image" alt="gallery-image"/>
                 <button className="gallery_button" onClick={handleNextClick}><ArrowBackIosIcon sx={{'transform': 'scaleX(-1)', 'color':'rgb(108, 194, 216)'}} /></button>
                 <div className="gallery__text-container">
                     <h4 className="gallery__heading">See Some Of My Projects</h4>

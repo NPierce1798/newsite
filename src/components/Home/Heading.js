@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import '../../App.css';
 

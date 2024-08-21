@@ -27,7 +27,7 @@ function AdvGame() {
                 console.error('Error fetching data:', error);
             });
     }, []);
-
+    console.log(posts)
     const handleChange = (e) => {
         const { name, value } = e.target;
         setNewPost((prevPost) => ({

@@ -13,13 +13,13 @@ const login = (username, password) => {
     return axios.post(API_URL + 'token/', {
         username,
         password,
-        })
-        .then((response) => {
-            if (response.data.access) {
-                localStorage.setItem("user", JSON.stringify(response.data));
-            }
-            return response.data;
-        });
+    })
+    .then((response) => {
+        if (response.data.access) {
+            localStorage.setItem("user", JSON.stringify(response.data));
+        }
+        return response.data;
+    });
 };
 
 const logout = () => {
@@ -30,9 +30,12 @@ const getCurrentUser = () => {
     return JSON.parse(localStorage.getItem("user"));
 };
 
-export default {
+// Assign the object to a variable before exporting
+const authService = {
     register,
     login,
     logout,
     getCurrentUser
 };
+
+export default authService;
