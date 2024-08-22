@@ -25,7 +25,7 @@ function GamePage () {
                 <h5 className="adv-game__sub-heading">Features & Functionality</h5>
                 <p>With a turn-based system, players make decisions that affect the story as it unfolds. OpenAI's GPT-3.5 model is used for dynamic generation based on player actions.</p>
                 <h5 className="adv-game__sub-heading">Deployment</h5>
-                <p>Example: "The game is deployed on AWS using Elastic Beanstalk for the backend and S3 for static content. The frontend is served through CloudFront."</p>
+                <p>The game is deployed on a DigitalOcean droplet using Django with a PostgreSQL database, also hosted on a DigitalOcean droplet, for the backend. The frontend is served through Netlify."</p>
                 <h5 className="adv-game__sub-heading">Future Features</h5>
                 <p>Future updates will include a four person multiplayer room where four characters will be able to interact and make decisions affecting the game. Share-able storylines will also be added, as well as potentially a text to speech feature which will read the story to you.</p>
             </div>
