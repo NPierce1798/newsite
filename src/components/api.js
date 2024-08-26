@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-const API_BASE_URL = 'http://165.227.86.141:8000/api/'; // Update this URL to match your Django endpoint
+const API_BASE_URL = 'http://165.227.86.141:8000/api/'; // Ensure this is defined correctly
 
 // Fetch existing posts
 export const getPosts = () => {
